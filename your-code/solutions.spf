@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>publications</string>
+			<key>host</key>
+			<string>34.65.10.136</string>
+			<key>kcid</key>
+			<string>-6578464051220591479</string>
+			<key>name</key>
+			<string>data_analysis_bootcamp</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>data-students</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentFilterV2</key>
+			<dict>
+				<key>children</key>
+				<array/>
+				<key>filterClass</key>
+				<string>groupNode</string>
+				<key>isConjunction</key>
+				<true/>
+			</dict>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0
+			b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRk
+			YXRhgAGtCwwZGhscHSEoLDA0OFUkbnVsbNMNDg8QFBhXTlMua2V5
+			c1pOUy5vYmplY3RzViRjbGFzc6MREhOAAoADgASjFRYXgAWABoAI
+			gAxUdHlwZVRyb3dzVGtleXNfECZTZWxlY3Rpb25EZXRhaWxUeXBl
+			UHJpbWFyeUtleWVkRGV0YWlsc9MNDg8eHyCgoIAH0iIjJCVaJGNs
+			YXNzbmFtZVgkY2xhc3Nlc18QE05TTXV0YWJsZURpY3Rpb25hcnmj
+			JCYnXE5TRGljdGlvbmFyeVhOU09iamVjdNIODykroSqACYAL0g8t
+			Li9ZTlMuc3RyaW5ngApYdGl0bGVfaWTSIiMxMl8QD05TTXV0YWJs
+			ZVN0cmluZ6MxMydYTlNTdHJpbmfSIiM1Nl5OU011dGFibGVBcnJh
+			eaM1NydXTlNBcnJhedIiIyY5oiYnAAgAEQAaACQAKQAyADcASQBM
+			AFEAUwBhAGcAbgB2AIEAiACMAI4AkACSAJYAmACaAJwAngCjAKgA
+			rQDWAN0A3gDfAOEA5gDxAPoBEAEUASEBKgEvATEBMwE1AToBRAFG
+			AU8BVAFmAWoBcwF4AYcBiwGTAZgAAAAAAAACAQAAAAAAAAA6AAAA
+			AAAAAAAAAAAAAAABmw==
+			</data>
+			<key>contentSortColIsAsc</key>
+			<false/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {1135, 791}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>USE publications;
+SELECT t.title_id, a.au_id,t.advance*ta.royaltyper/100 as 'advance', t.price * s.qty * t.royalty / 100 * ta.royaltyper / 100 'royalty'
+FROM authors a
+JOIN titleauthor ta ON a.au_id = ta.au_id
+JOIN titles t ON t.title_id = ta.title_id
+JOIN sales s ON s.title_id = s.title_id;
+
+</string>
+			<key>table</key>
+			<string>titles</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>170</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>SELECT t.title_id, a.au_id,t.advance*ta.royaltyper/100 as 'advance', t.price * s.qty * t.royalty / 100 * ta.royaltyper / 100 'royalty'
+FROM authors a
+JOIN titleauthor ta ON a.au_id = ta.au_id
+JOIN titles t ON t.title_id = ta.title_id
+JOIN sales s ON s.title_id = s.title_id</string>
+		<string>SELECT t.title_id, a.au_id,t.advance*ta.royaltyper/100 as 'advance'
+FROM authors a
+JOIN titleauthor ta ON a.au_id = ta.au_id
+JOIN titles t ON t.title_id = ta.title_id
+JOIN sales s ON s.title_id = s.title_id</string>
+		<string>SELECT t.title_id, a.au_id
+FROM authors a
+JOIN titleauthor ta ON a.au_id = ta.au_id
+JOIN titles t ON t.title_id = ta.title_id</string>
+		<string>SELECT t.title_id, a.au_id, 
+FROM authors a
+JOIN titleauthor ta ON a.au_id = ta.au_id
+JOIN titles t ON t.title_id = ta.title_id</string>
+		<string>SELECT a.au_id, ta.au_ord 
+FROM authors a
+JOIN titleauthor ta ON a.au_id = ta.au_id</string>
+		<string>SELECT a.au_id, titleauthor.au_ord 
+FROM authors a
+JOIN titleauthor ON a.au_id = titleauthor.au_id</string>
+		<string>SELECT authors.au_id, titleauthor.au_ord 
+FROM authors a
+JOIN titleauthor ON a.au_id = titleauthor.au_id</string>
+		<string>SELECT authors.au_id, titleauthor.au_ord 
+FROM authors 
+JOIN titleauthor ON authors.au_id = titleauthor.au_id</string>
+		<string>SELECT authors.au_id, titleauthor.au_ord 
+FROM authors 
+JOIN titleauthor ON author.au_id = titleauthor.au_id</string>
+		<string>USE publications</string>
+		<string>USE publications
+SELECT authors.au_id, titleauthor.au_ord FROM authors JOIN titleauthor ON author.au_id = titleauthor.au_id</string>
+		<string>SELECT authors.au_id, titleauthor.au_ord FROM authors JOIN titleauthor ON author</string>
+		<string>USE publications
+SELECT authors.`au_id`, `titleauthor`.`au_ord` FROM authors JOIN titleauthor ON author.au_id = titleauthor.au_id</string>
+		<string>USE publications
+SELECT authors.`au_id`, `titleauthor`.`au_ord` FROM authors JOIN titleauthor ON author.au_id = titleauthor.au_id #t.title_id, a.au_id, t.advance*ta.royaltyper/100 as 'advance', t.price * s.qty * t.royalty / 100 * ta.royaltyper / 100 'royalty'
+
+#JOIN titles ON titles.title_id = titleauthor.title_id JOIN sales ON sales.title_id = titleauthor.title_id;</string>
+		<string>USE publications
+SELECT authors.`au_id`, `titleauthor`.`au_ord` FROM authors JOIN titleauthor ON titleauthor.au_id = author.au_id JOIN titles ON titles.title_id = titleauthor.title_id JOIN sales ON sales.title_id = titleauthor.title_id</string>
+		<string>SELECT * FROM authors JOIN titleauthor ON titleauthor.au_id = author.au_id JOIN</string>
+		<string>USE publications
+SELECT * FROM authors JOIN titleauthor ON titleauthor.au_id = author.au_id JOIN titles ON titles.title_id = titleauthor.title_id JOIN sales ON sales.title_id = titleauthor.title_id</string>
+		<string>USE publications
+SELECT * FROM authors 
+JOIN titleauthor ON titleauthor.au_id = author.au_id 
+JOIN titles ON titles.title_id = titleauthor.title_id 
+JOIN sales ON sales.title_id = titleauthor.title_id</string>
+		<string>USE publications
+SELECT * FROM authors, 
+JOIN titleauthor ON titleauthor.au_id = author.au_id 
+JOIN titles ON titles.title_id = titleauthor.title_id 
+JOIN sales ON sales.title_id = titleauthor.title_id</string>
+		<string>USE publications
+SELECT * FROM authors a, 
+JOIN titleauthor ta ON ta.au_id = a.au_id 
+JOIN titles t ON t.title_id = ta.title_id 
+JOIN sales s ON s.title_id = ta.title_id</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.7.14-google-log</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
